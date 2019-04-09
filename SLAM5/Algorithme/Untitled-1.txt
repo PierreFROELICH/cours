@@ -1,0 +1,14 @@
+﻿//---------------------------------/ Question 1 /---------------------------------//
+//---------/ Creer une collection de 10 comptes /---------//
+
+//---------------------------------/ Question 2 /---------------------------------//
+//---------/ A partir d'unn menu l'utilisateur va /---------//
+--> Saisir son numéro de compte
+    - Si n° Valide alors affichage du menu
+        1 --> Consultation Solde
+        2 --> Retrait
+        3 --> Debit
+        4 --> Quitter
+        =>On recommence autant de fois que l'on veut
+    - Si n° Invalide alors => Au revoir!
+ut

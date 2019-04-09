@@ -1,0 +1,62 @@
+package Banque;
+
+public class Compte 
+{
+  // Déclaration des attributs de la classe
+	private static  String Nom;
+	private static  int Num;
+	private  static double Solde;
+	 
+	 // Déclaration des méthodes de la classe
+	 // Déclaration du constructeur de la classe 
+	public Compte (int no, String nm, double s)
+	{
+		Nom= nm;
+		Num= no; 
+	    Solde = s;
+	}
+	 
+	 // Définition des méthodes accesseurs
+	 
+	  public String getNom()
+	  {
+		  return Nom;
+	  }
+	 
+	  public int getNum()
+	  {
+		  return Num;
+	  }
+	  
+	  public double getSolde()
+	  {
+		  return Solde;
+	  }    
+	 
+	 public void Consulte ()
+	 {
+		 System.out.println(" Votre solde est de " +Solde + " €" );
+	 }		 
+		 
+	 public void  Deposer ( double SommeBis)	
+	 {
+		 Solde = Solde + SommeBis;
+	 }
+		 
+	 public void  Retirer( double SommeBis)	
+	 {
+		  
+		 Solde = Solde - SommeBis;  
+	 }		 
+ 
+}  
+
+
+
+
+
+
+
+
+
+

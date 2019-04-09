@@ -1,0 +1,34 @@
+Algorithme " Suppression dans le  fichier Salarié"
+Variables :  CC= Rep
+             Entier = Matsaisi
+Fichier :
+         Fichier Salarié (Organisation séquentielle indexée)
+		 Enr-Salarié
+            S-Mat : Entier = clé
+            S-Nom : CC
+            S-NSS : Entier
+            S-Diplome : CC
+            S-Service : CC
+         Fin Enr-Salarié
+
+Début
+     Ouvrir Salarié en écriture
+	 Répéter
+	        Afficher " Quel est le matricule du salarié à supprimer?"
+			Saisir Matsaisi
+			S-Mat = Matsaisi
+			Lire Enr-Salarié
+			Si Ik Alors afficher " désolé, salarié n'exite pas "
+			      Sinon Supprimer Enr-Salarié
+				        Si IK Alors Afficher " Suppression impossible"
+						      Sinon Afficher "Suppression réussie"
+						Fsi	  
+            FSI
+
+           Afficher " Autre recherche ?"
+		   Saisir Rep
+	Jusqu'à Rep = "Non"	
+		
+	Fermer Salarié
+Fin	 			
+			

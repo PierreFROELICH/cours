@@ -1,0 +1,98 @@
+Question 2.1
+Classe fille qui est en relation avec une super classe
+
+Procédure LocationSansChauffeur ( entier unNumLoc, CC uneDate ,réel unMontantRegle,  réél unNbKmDepart, Vehicule unVehicule, 
+	FormuleSans	Chauffeur uneFormuleSansChauffeur )
+Début
+
+	Super (unNumLoc, uneDate, unMontantRegle, unVehicule) 
+	nbKmDepart <-- unNbKmDepart
+	nbKmRetour <-- 0
+	laFormuleSansChauffeur <--  uneFormuleSansChauffeur 
+	
+ Fin
+ 
+ 
+ Question 2.2
+ 
+ Fonction GetMontantDepasForfait() : réel
+ Variables :  Numérique = MtDepassement, NbKmPermis, Kms, Dif, TarifTaxe
+              Vehicule MonVehicule
+			    Modele MonModèle 
+ 
+ 
+ Début
+ 
+  NbKmPermis <-- This.GetNbKmInclus()
+  Kms <--NbKmRetour -  NbKmDepart
+  Dif <-- Kms - NbKmPermis
+  Si Dif  < 0 Alors MtDepassement <-- 0
+              Sinon  MonVehicule <-- This. GetLeVehicule()
+			         MonModele <-- MonVehicule.GetLeModele()
+					 TarifTaxe <-- MonModele.GetTarifKmSupplementaire() 
+					 MtDepassement <- Dif * TarifTaxe
+  Fsi
+  Retourner MtDepassement
+Fin  
+			  
+ Question 3.1
+    
+					 Application Native         Application Hybride        Application WEB
+		 
+Tps développement          *							**						***
+Ergonomie                 ***                           **                        *
+Rapidité d'exécution      ***                           **                        *
+ 	      	 
+A la lecture du tableau, on remarque la solution à retenir est l'appliaction native	
+
+Question 3.2
+
+ 48 000 = 3 *20 * 2 *400 
+ 3 développeurs à temps plein  pour une durée de 2 mois
+1 mois = 20 jours  
+1 développeur est facturé 400 € par jours
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+   
+ 
+ 
+    

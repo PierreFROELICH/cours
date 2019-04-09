@@ -1,0 +1,24 @@
+Algorithme "Tri Par Transposition"
+Variable indicée : Tab de N cases de type numérique
+                   
+Variables : numérique : N, I, J, Save
+Début
+     /* La valeur de N est saisie et le tableau Tab est constitué*/
+	 I <-- 1
+	 Tant que I < N
+	   Si  Tab[I] > Tab [I+1] Alors Save <-- Tab[I]
+									Tab[I] <--Tab[I+1]
+									Tab[I+1] <-- Save
+									// retour arrière pour vérifier l'ordre initial
+									 J <-- I -1
+									 Tant que J >=1
+									  Si Tab[J] > Tab[J+1] Alors Save <-- Tab[J]
+																 Tab[J] <--Tab[J+1]
+																 Tab[J+1] <-- Save
+									  FSI
+									  J<-- J-1
+									  FinTantque
+		FSI							  
+		I <-- + +1
+	 Ftantque		
+															

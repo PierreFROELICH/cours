@@ -1,0 +1,49 @@
+Algorithme " Affichage du contenu du fichier Salarié"
+Variables :  Aucune
+Fichier :
+         Fichier Salarié (Organisation séquentielle)
+		 Enr-Salarié
+            S-Mat : Entier
+            S-Nom : CC
+            S-NSS : Entier
+            S-Diplome : CC
+            S-Service : CC
+         Fin Enr-Salarié
+
+Début
+     Ouvrir Salarié en lecture
+     Lire Enr-Salarié (1er Enregistrement)
+	 Tantque (NonFinFichierSalarié)
+	   Afficher " le nom est ", S-Nom, " et le numéro de sécuruté sociale est ", S-NSS
+	   Lire Enr-Salarié (Enregistrement Suivant)
+	Ftantque 
+	Fermer Salarié
+Fin	
+	
+	   
+	   
+		
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+			
+		
+
+	Fermer Salarié
+
+Fin

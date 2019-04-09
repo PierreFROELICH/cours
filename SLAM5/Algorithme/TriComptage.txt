@@ -1,0 +1,67 @@
+Algorithme "Tri Par Comptage"
+Variable indicée : Tab de N cases de type numérique
+                   Compteur de N cases de type numérique
+Variables : numérique : N, I, J, Valeur, Save
+Début
+     /* La valeur de N est saisie et le tableau Tab est constitué
+     /* Création du tableau des compteurs 
+      Pour I allant de 1 à N 
+	      Compteur [I] <-- 0
+	  Fpour	  
+ 	   I <-- 1
+      Tantque I < N
+		J <-- I + 1
+		Tantque J <=N
+		  Si Tab[I] > Tab [J] Alors Compteur[I] <-- Compteur[I] +1
+							  Sinon	Compteur[J] <-- Compteur[J] +1
+		  Fsi	
+          J <-- J+1
+        Ftantque  		
+		I <-- I +1
+	Ftantque	
+	
+	/* Utilisation du tableau des compteurs
+	Valeur <--0
+	I <-- 1
+	Tantque Valeur < N
+	
+		/* Recherche de la valeur dans le tableau des compteurs
+		J <-- I
+		Tant que Valeur <> Compteur[J]
+			J <-- J+1
+		Ftantque	
+		
+		/* Permutations dans les 2 vecteurs
+		   Save <-- Tab[I]
+		   Tab[I] <-- Tab[J]
+		   Tab[J] <-- Save
+		
+		   Save <-- Compteur[I]
+		   Compteur[I] <-- CompteurJ]
+		   Compteur[J] <-- Save
+		
+		 /* Passage à la valeur suivante
+			Valeur <-- valeur +1
+		
+		/* Préparation placement suivant 
+			I <--  I +1	
+    Ftanque		
+Fin	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

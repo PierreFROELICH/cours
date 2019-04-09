@@ -1,0 +1,33 @@
+case 1 :
+			BufferedWriter stock = new BufferedWriter(new FileWriter("Personne.txt"));
+			nb=Saisie.lire_int("Combien d'enregistrements souhaiteriez-vous créer?");
+			for (i=0;i<nb;i++)
+			{
+			Nom = Saisie.lire_String("Quel est votre nom?");
+			Prenom = Saisie.lire_String("Quel est votre prenom?");
+			anneeNaissance = Saisie.lire_int("Quel est votre annee de naissance?");
+			sexe = Saisie.lire_String("Quel est votre sexe?");
+			stock.write(Nom+" ");
+			stock.write(Prenom+" ");
+			stock.write(anneeNaissance+" ");
+			stock.write(sexe+" ");
+			stock.write("\n");
+			}
+			stock.close();
+		break;
+		case 2 :
+			// Lecture du fichier Personne.txt
+			System.out.println("Voici les personnes dans le fichier");
+			
+			FileReader stockBis = new FileReader ("Personne.txt");
+			do
+			{
+			lect = stockBis.read();
+				if (lect!=-1) 
+				{
+					System.out.print((char)lect);
+				}		
+			}
+			while (lect != -1);
+			stockBis.close();
+		break;

@@ -1,0 +1,41 @@
+Algorithme " Création du fichier Salarié"
+Variables :  CC= Rep
+Fichier :
+         Fichier Salarié (Organisation séquentielle indexée)
+		 Enr-Salarié
+            S-Mat : Entier = clé
+            S-Nom : CC
+            S-NSS : Entier
+            S-Diplome : CC
+            S-Service : CC
+         Fin Enr-Salarié
+
+Début
+     Ouvrir Salarié en écriture
+     Répéter
+            AFFICHER " Quel est le numéro de matricule ? "
+			Saisir S-Mat
+			
+			AFFICHER " Quel est le nom du salarié ?"
+			Saisir S-Nom
+			
+			AFFICHER " Quel est le numéro de SS "
+			Saisir S-NSS
+			
+			AFFICHER " Quel est diplôme obtenu ? "
+			Saisir S-Diplome
+			
+			AFFICHER " Dans quel service ?"
+			Saisir S-Service
+			Ecrire Enr-Salarié
+			Si Ik Alors Afficher " Création de l'enregistrement impossible"
+			      Sinon  Afficher "Création réussie"
+			Fsi
+			
+			Afficher " Autre salarié à créer ?
+			Saisir Rep
+	Jusqu'à Rep  = "Non"
+
+	Fermer Salarié
+
+Fin

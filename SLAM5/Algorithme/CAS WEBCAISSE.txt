@@ -1,0 +1,99 @@
+##############################
+--------CAS WEBCAISSE---------
+##############################
+
+
+###Question 3.1###
+
+La méthode statVente() est une fonction qui va retourner un résultat correspondant a un taux de vente réalisée par des clients fidèles par rapport au nombre total de ventes de la journée
+qui est une collection passée en paramètres.
+
+
+###Question 3.2###
+
+Fonction getNbVentes() : entier
+
+Variables :
+    Numérique = nbVentes
+
+DEBUT
+
+nbVentes <-- lesVentes.cardinal() //cardinal() retourne le nombre d'objets dans la collection
+retourner nbVentes
+
+FIN
+
+
+###Question 3.3###
+
+Procedure VenteEcommerce (CC: adresseLivraison, CC: optionLivraison, Date: dateVente, réel: montant, Conso: leConso)
+
+DEBUT
+
+super(dateVente, leConso, montant) //c# --> base(); php --> parent(); Java --> super()
+adresseLivraison <-- adresseLivraison
+optionLivraison <-- optionLivraison
+
+FIN
+
+
+##Question 3.4###
+
+Fonction compareLieuVente(Collection d'objets de type ConsoFidele : lesConsos) : réel
+
+
+Variables :
+    Numérique = totalEcom, totalMag, taille, i
+    ConsoFidele = uneVente
+
+DEBUT
+
+totalEcom <-- 0
+totalMag <-- 0
+talle <-- lesConsos.cardianl()
+
+Pour i allant de 1 à taille
+    uneVente <-- lesConsos.extraireObjet[i]
+
+    Si uneVente = TypeClass VenteEcommercee alors
+        totalEcom <-- totalEcom + uneVente.getMontantVente()
+    Sinon
+        totalMag <-- totalMag + uneVente.getMontantVente()
+    FSi 
+
+FPour
+
+retourne totalMag / totalEcom 
+
+FIN
+
+
+##Question 3.5##
+
+
+
+
+##Question 3.6##
+
+Fonction listeVentes(Réel: unMontant) : Collection d'objets de type Vente
+
+Variables :
+	Numérique = i
+	Vente = uneVente
+	Collection de Vente = listeAReourner
+
+DEBUT
+
+	listeARetourner <-- []
+
+	Pour i allant de 1 à lesVentes.cardinal()
+		uneVente <-- lesVentes.extraireObjet[i]
+
+		Si uneVente.getMontantVente > unMontant alors
+			listeARetourner[].ajout(uneVente)
+		FSi
+	FPour
+
+	retourner listeARetourner
+
+FIN

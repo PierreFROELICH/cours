@@ -1,0 +1,12 @@
+	public int dureeRetardResponsable(String codeSituation)
+	{
+		int retrd = 0;
+		String boursouf = null;
+		for(Retard i : lesRetards){		
+			boursouf = i.getType().getCodeSituation();
+			if(boursouf.equals(codeSituation) && i.getImpliqueAeroport() == true ){
+				retrd += i.getDuree(); 
+			}
+		}
+		return retrd;
+	}

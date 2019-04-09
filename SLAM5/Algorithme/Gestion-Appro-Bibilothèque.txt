@@ -1,0 +1,83 @@
+Algorithme " MAJ Stock Bibliothèque"
+Variables :  CC= Rep, NomAuteurSaisi, TitreLivreSaisi
+             Entier = NumLivSaisi, NBExp
+Fichiers :
+         Fichier Livre (Organisation séquentielle indexée)
+		 Enr-Livre
+            L-Nuliv : Entier = clé
+            L-Auteur : CC
+            L-Titre: CC
+            L-Nbex: entier
+            L-Nbsort: Entier
+         Fin Enr-Livre
+		 
+		 Fichier Auteur(Oganisation séquentielle )
+		 Enr-Auteur
+            A-Auteur : CC
+            A-Nbliv : Entier
+			A-Nuliv : Vecteur de 10 cases numériques
+         Fin Enr-Livre
+Début
+// Ouverture des fichiers
+    Ouvrir Auteur en lecture/écriture
+	Ouvrir Livre en lecture/écriture
+// Traitement des livres réceptionnés
+   Répéter
+          Afficher " Veuillez saisir le numéro du livre ?
+		  Saisir NumLivSaisi
+		  Afficher " Combien d'exemplaires ?"
+		  Saisir NBExp
+// rechercher si le livre existe
+           L-Nuliv <-- NumLivSaisi
+		   Lire Enr-Livre
+		   Si IK Alors Afficher "Livre introuvable "
+		               // Création de l'enregistrement Livre 
+		               Afficher " Quel est le nom de l'auteur ?"
+					   Saisir NomAuteurSaisi
+					    Afficher " Quel est le titre du livre?"
+					   Saisir TitreLivreSaisi
+					    L-Auteur <-- NomAuteurSaisi
+						L-Nbex <-- NBExp
+						L-Nbsort <-- 0
+						L-Titre <-- TitreLivreSaisi
+						Ecrire Enr-Livre
+						Si IK Alors Afficher " Création impossible"
+						      Sinon Afficher " Création réussie "
+						Fsi	  
+					// Gestion de l'auteur			
+				        Lire Enr-Auteur ( premier enregistrement)
+						Tantque ( NonFinFichier Auteur) ET ( NomAuteurSaisi <> A-Auteur)
+						  Lire Enr-Auteur( Enregistement suivant)
+						FinTantque  
+						Si NomAuteurSaisi = A-Auteur Alors Afficher "Auteur Existant"
+						                                   A-Nbliv <-- A-Nbliv +1
+														   Si A-Nbliv >10 Alors Afficher " vecteur rempli donc pas d'ajout"
+														                  Sinon A-Nuliv [A-Nbliv] <-- NumLivSaisi
+														   Fsi
+														   Réécrire Enr-Auteur
+														   							   
+													  Sinon Afficher " AuteurNon existant"
+													        A-Auteur <-- NomAuteurSaisi
+															A-Nbliv <-- 1
+                                                            A-Nuliv [1] <-- NumLivSaisi 
+															Ecrire Enr-Auteur
+						Fsi	
+				Sinon Afficher " Livre trouvé donc MAJ"
+                      L-Nbex <-- L-Nbex + Nbex
+					  Réécrire Enr-Livre
+                      Si IK Alors Afficher " MAJ impossible"
+                            Sinon Afficher " MAJ OK"
+					  Fsi			
+			Fsi
+        Afficher "Autre livre ? ( Oui/Non)"
+		Saisir Rep
+      Jusqu'à Rep="Non"   
+	  // Fermeture des fichiers
+	  Fermer Livre et Auteur
+Fin	  
+	  
+	
+	
+	
+	
+	 

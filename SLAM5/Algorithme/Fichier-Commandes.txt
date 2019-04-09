@@ -1,0 +1,50 @@
+Algorithme" Gestion des commandes"
+Fichier : Voir énoncé
+Variables : Numérique = 
+
+Début
+     Ouvrir Commandes en lecture
+	 
+	 Ecrire " Etat récapitulatif des commandes"
+	 Lire Enr-Commande ( Premier enregistrement)
+	 E-MtTotal <-- 0
+	 Tant que Non FF Commandes
+	 
+	    E-NumRep <--  C-NumRep	
+        Ecrire " Représentant N°",  E-NumRep
+		Ecrire " Référence      Désignation     Montant"
+		
+		E-MtRep <- 0
+		Tantque (Non FF Commandes) ET ( E-NumRep = C-NumRep)
+
+				E-REf <-- C-Réf
+				E-Désign <-- C-Désignation
+                E-MtProd <--0 
+                Tantque (Non FF Commandes) ET ( E-NumRep = C-NumRep) et ( E-Ref= C-Ref)
+				     E-MtProd <-- E-MtProd +( C-Qtité * C-PU)
+					 Lire Enr-Commande ( Enregistrement Suivant)
+				FTanque
+				
+				
+				E-MtRep <-- E-MtRep + E-MtProd
+				Ecrire  E-Réf, E-Design , E-MtProd
+				
+        Ftantque
+		
+		Ecrire " Total du CA du représentant", E-MtRep	
+		E-MtTotal <-- E-MtTotal + E-MtRep	
+	Ftantque
+	Ecrire " Total génaral des ventes ", E-MtTotal
+	Fermer Commande
+Fin	
+
+
+
+
+		
+		
+	 
+
+
+
+

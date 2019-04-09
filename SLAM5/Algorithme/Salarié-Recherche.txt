@@ -1,0 +1,34 @@
+Algorithme " Recherche d'un enregistrement spécifique dans le fichier Salarié"
+Variables :  CC = NomSaisi, Rep
+Fichiers :
+         Fichier Salarié (Organisation séquentielle)
+		 Enr-Salarié
+            S-Mat : Entier
+            S-Nom : CC
+            S-NSS : Entier
+            S-Diplome : CC
+            S-Service : CC
+         Fin Enr-Salarié
+
+Début
+     Ouvrir Salarié en lecture
+	 Répéter
+	 
+		Afficher " Quel est le nom du salarié que vous recherchez ?"
+		Saisir NomSaisi
+		Lire Enr-Salarié (1er Enregistrement)
+		Tantque (NonFinFichierSalarié)et ( S-Nom <> NomSaisi)
+	   	   Lire Enr-Salarié (Enregistrement Suivant)
+		Ftantque 
+	
+		Si S-Nom = NomSaisi Alors Afficher " Le numéro de matricule su salarié est ", S-Mat,
+	                                   " Le numéro de SS est " , S-NSS, " le diplôme obtenu par", S-Nom
+									   " est" , S-Diplome, " et il est employé au service ", S-Service
+						Sinon Afficher " Ce nom n'existe pas dans le fichier "
+		Fsi
+		Afficher " Autre recherche ?"
+		Saisir Rep
+	Jusqu'à Rep = "Non"	
+		
+	Fermer Salarié
+Fin	

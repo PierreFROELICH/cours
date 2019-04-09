@@ -1,0 +1,94 @@
+Etude de cas Dossier 4
+Question 4.1
+Voir schéma UML
+
+Question 4.2
+Procédure init(uneDate : date, unCommentaire : CC, unNbKm : entier, 
+                unType : EntretienType)
+Début
+     dateEntretien <-- uneDate
+	  nbKmCompteur <-- unNbKm
+	  commentaire <--unCommentaire
+	  leType <-- unType
+Fin	  
+
+Question 4.3
+Procédure ajouteEntretien (uneDate : date, unCommentaire : CC,
+                            unType : EntretienType,unNbKm : entier )
+							
+Variable : MonEntretien : Entretien
+Début 
+     MonEntretien.init(uneDate : date, unCommentaire : CC,
+                            unType : EntretienType,unNbKm : entier )
+     mesEntretiens.ajouter(MonEntretien)
+Fin
+
+Question 4.4
+Fonction nécessiteEntretien ( unVéhicule : Véhicule) : Booléen
+Variables : Booléenne : TestEntretien
+            Numérique :NbEntretiens, NbKmDernierEntretien, NbKmParcourus, NbTypes, I
+			UnTypeExtrait : EntretienType
+Début 
+    testEntretien <-- faux  
+    NbEntretiens <-- UnVéhicule .getnbEntretiens()
+	NbKmDernierEntretien <-- unVéhicule . getUnEntretien(NbEntretiens)
+	NbKmParcourus <-- unVéhicule.getNbKmActuel()-NbKmDernierEntretien
+	NbTypes <-- lesTypesExistants .cardinal()
+	I <-- 1
+	Tantque I <= NbTypes  
+	    UnTypeExtrait <-- lesTypesExistants.donnerObjet(I)
+	    Si(NbKmParcourus >= UnTypeExtrait.getNbKm()) OU
+		  (NbKmParcourus <= UnTypeExtrait.getNbKm()+ UnTypeExtrait.getNbKmToléré()) OU
+		  (NbKmParcourus >= UnTypeExtrait.getNbKm()- UnTypeExtrait.getNbKmToléré())
+	    Alors TestEntretien <--Vrai
+        Sinon  I <-- I +1
+        Fsi
+    FintTantque
+    Retourner TestEntretien
+Fin	
+Question 4.5
+Fonction véhiculesAEntretenir() : Collection de Véhicule
+Variables : MaCollection : Véhicule
+            Numérique = Nb, I
+			Véhicule = UnVéhiculeExtrait
+			Booléenne = Res
+			
+Début  
+      nb <-- lesVéhicules . cardinal()
+	  Pour I allant de 1 à nb
+	     UnVéhiculeExtrait <-- lesVéhicules . donnerObjet(I)
+		 Res <-- UnVéhiculeExtrait.nécessiteEntretien
+		 Si Res= Vrai Alors MaCollection.ajouter(UnVéhiculeExtrait)
+		 Fsi
+	  Fpour
+      Retourner MaCollection
+Fin	  
+	  
+	
+	
+	
+	
+	
+
+
+
+
+
+
+
+
+
+
+	 
+          
+
+
+
+
+
+
+
+
+
+		  
+

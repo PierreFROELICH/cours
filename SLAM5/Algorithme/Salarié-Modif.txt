@@ -1,0 +1,36 @@
+Algorithme " Modification  du fichier Salarié"
+Variables :   CC= NomSaisi, NouveauPoste
+Fichier :
+         Fichier Salarié (Organisation séquentielle)
+		 Enr-Salarié
+            S-Mat : Entier
+            S-Nom : CC
+            S-NSS : Entier
+            S-Diplome : CC
+            S-Service : CC
+         Fin Enr-Salarié
+		 
+Début
+        Ouvrir Salarié en lecture / écriture
+	
+		Afficher " Quel est le nom du salarié que vous recherchez ?"
+		Saisir NomSaisi
+		Lire Enr-Salarié (1er Enregistrement)
+		Tantque (NonFinFichierSalarié)et ( S-Nom <> NomSaisi)
+	   	   Lire Enr-Salarié (Enregistrement Suivant)
+		Ftantque 
+	
+		Si S-Nom = NomSaisi Alors Afficher " Le salarié est employé dans le service ", 	S-Service
+                                  Afficher " Veuillez saisir le nouveau service"
+                                  Saisir NouveauPoste 	
+                                  S-Service = NouveauPoste
+
+                                  Reécrire Enr-Salarié
+						    Sinon Afficher " salarié inexistant"
+        FinSi
+
+        Fermer Salarié
+		Fin
+		
+		
+		

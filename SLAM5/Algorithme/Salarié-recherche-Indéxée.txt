@@ -1,0 +1,32 @@
+Algorithme " Recherche dans le  fichier Salarié"
+Variables :  CC= Rep
+             Entier = Matsaisi
+Fichier :
+         Fichier Salarié (Organisation séquentielle indexée)
+		 Enr-Salarié
+            S-Mat : Entier = clé
+            S-Nom : CC
+            S-NSS : Entier
+            S-Diplome : CC
+            S-Service : CC
+         Fin Enr-Salarié
+
+Début
+     Ouvrir Salarié en lecture
+	 Répéter
+	        Afficher " Quel est le matricule du salarié recherché ?"
+			Saisir Matsaisi
+			S-Mat = Matsaisi
+			Lire Enr-Salarié
+			Si Ik Alors afficher " désolé, salarié n'exite pas "
+			      Sinon Afficher " le dilpôme du salarié dont le matricule est", S-Mat, "est",S-Diplome,
+                                 " Il est dans le service ", S-Service
+            FSI
+
+           Afficher " Autre recherche ?"
+		   Saisir Rep
+	Jusqu'à Rep = "Non"	
+		
+	Fermer Salarié
+Fin	 			
+			

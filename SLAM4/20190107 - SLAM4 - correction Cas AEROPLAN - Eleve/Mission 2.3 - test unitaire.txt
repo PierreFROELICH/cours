@@ -1,0 +1,28 @@
+﻿	@Test
+	public void testRetardResponsable() {
+		TypeRetard leType1 = new TypeRetard(1, "AV", "Occupation des pistes");
+		TypeRetard leType2 = new TypeRetard(2, "EV", "Situation climatique");
+		TypeRetard leType3 = new TypeRetard(3, "AV", "Greve generale");
+		TypeRetard leType4 = new TypeRetard(4, "EV", "Mutinerie");
+
+		Retard unRetard = new Retard(1,"pluie au décollage", leType1, 50,true);
+		Retard autreRetard = new Retard(2,"Vent défavorable", leType2, 20,false);
+		Retard encoreUnRetard = new Retard(3,"Vent défavorable", leType3, 40,false);
+		Retard quatriemeRetard = new Retard(4,"Vent défavorable", leType4, 70,true);
+	
+		assertEquals("Initialisation incorrecte", 0, mvtTest.dureeRetardResponsable("AV"));
+
+		mvtTest.ajouteRetard(unRetard);
+		assertEquals("Calcul incorrect", 50, mvtTest.dureeRetardResponsable("AV"));
+
+		mvtTest.ajouteRetard(autreRetard);
+		assertEquals("Calcul incorrect 2 retards", 50, mvtTest.dureeRetardResponsable("AV"));
+		
+		mvtTest.ajouteRetard(encoreUnRetard);
+		assertEquals("Calcul incorrect 3 retards", 50, mvtTest.dureeRetardResponsable("AV"));
+		
+		mvtTest.ajouteRetard(quatriemeRetard);
+		assertEquals("Calcul incorrect 4 retards", 50, mvtTest.dureeRetardResponsable("AV"));
+
+	
+	}

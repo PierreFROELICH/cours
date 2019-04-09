@@ -1,0 +1,23 @@
+// méthode aLieuLejour
+
+foreach ($this->lesJours as $jour)
+        {
+            $results = false;
+            if($jour == $unJour)
+            {
+                $results = true;
+            }
+            return $results;
+        }
+
+// méthode coursJour
+
+ foreach($this->lesCours as $cour)
+        {
+            $lesCoursJour = array();
+            if($cour->aLieuLeJour($unJour)==true)
+            {
+                $lesCoursJour[] = $cour;
+            }
+        }
+        return $lesCoursJour;
